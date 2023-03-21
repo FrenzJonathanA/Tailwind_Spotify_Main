@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+/* @layer base{
+    .container{
+        @apply p-[1.5rem] max-w-[140rem] mx-auto
+    }
+} */
+
+@layer components{
+    .toggle__menu span{
+        width: 2rem;
+        height: .2rem;
+        background-color: white;
+        display: block;
+        border-radius: 5rem;
+        transition: .5s ease;
+        
+    }
+    .toggle__menu span:nth-child(2){
+        margin: .2rem 0;
+    }
+    .toggle__menu.open span:first-child{
+        @apply translate-x-0 translate-y-[10px] rotate-[225deg] ease-out duration-[.5s];
+    }
+    .toggle__menu.open span:nth-child(2){
+        @apply opacity-0;
+    }
+    .toggle__menu.open span:last-child{
+        @apply translate-x-0 translate-y-[-3px] rotate-[-225deg] ease-out duration-[.5s];
+    }
+    .header__nav ul{
+        @apply absolute bg-dark right-0 top-0 w-0 h-[100vh] overflow-hidden p-0 z-[999] lg:static lg:w-full lg:h-auto;
+    }
+    .header__nav ul li:not(:first-child), .header__nav ul li:not(:last-child){
+        @apply mx-[1rem];
+    }
+    .header__nav ul.open{
+        @apply w-[85%]  p-[2rem];
+    }
+    .arjay.show{
+        @apply w-full;
+    }
+
+
+    .items .cards:not(:first-child), .items cards:not(:last-child){
+        @apply my-[3rem];
+    }
+
+
+    /* .itemQ .itemQ__top h4{
+        @apply pb-[1rem]
+    }
+    .itemQ ul li{
+        @apply pb-[1rem]  font-semibold 
+    }
+    .itemQ ul{
+        @apply hidden ease-out duration-[.5s]  lg:w-full lg:h-auto
+    }
+    .itemQ ul.open{
+        @apply block ease-out duration-[.5s]
+    }
+    .itemQ__top i.open{
+        @apply rotate-[-180deg] ease-in duration-[.5s];
+    }
+    .itemQ__top i{
+        @apply  ease-out duration-[.5s] 
+    } */
+
+
+    .footer__wrapper .social ul li:nth-child(2){
+        @apply mx-[1rem];
+    }
+    .item .item__top h4{
+        @apply pb-[1rem]
+    }
+    .item ul li{
+        @apply pb-[1rem] hover:text-green font-semibold  cursor-pointer
+    }
+    .item ul{
+        @apply hidden ease-out duration-[.5s] lg:block lg:w-full lg:h-auto
+    }
+    .item ul.open{
+        @apply block ease-out duration-[.5s]
+    }
+    .item__top i.open{
+        @apply rotate-[-180deg] ease-in duration-[.5s];
+    }
+    .item__top i{
+        @apply  ease-out duration-[.5s] lg:hidden
+    }
+    
+    .btn button{
+        @apply inline-block py-[.8rem] lg:px-[3rem] lg:mr-[1rem]
+    }
+    /* -----------DEVELOPER PAGE------------ */
+
+
+    .toggle__menuDev span{
+        /* @apply w-[1.5rem] h-[1.5rem] bg-light block  */
+        width: 1.5rem;
+        height: .2rem;
+        background-color: white;
+        display: block;
+        border-radius: 5rem; 
+    }
+
+    .toggle__menuDev span:nth-child(2){
+        margin: .2rem 0;
+    }
+    .toggle__menuDev.open span:first-child{
+        @apply translate-x-0 translate-y-[10px] rotate-[-45deg] ease-out duration-[.5s];
+    }
+    .toggle__menuDev.open span:nth-child(2){
+        @apply opacity-0
+    }
+    .toggle__menuDev.open span:last-child{
+        @apply translate-x-0 translate-y-[-3px] rotate-[45deg] ease-out duration-[.5s];
+    }
+
+    .headerDev__tabs2 ul{
+        @apply bg-darkgray w-full  h-0  duration-[.5s] overflow-hidden;
+    }
+    .headerDev__tabs2 ul.open{
+        @apply bg-darkgray w-full h-[27.5rem] ease-in-out duration-[.5s];
+    }
+
+
+    .header__hoverDocs{
+        @apply bg-darkgray h-[0rem] duration-[.5s] w-full overflow-hidden absolute;
+    }
+    .header__hoverDocs.open{
+        @apply bg-darkgray h-[18rem] ease-in-out duration-[.5s] py-[.5rem] absolute;
+    }
+
+    .header__hoverComm{
+        @apply bg-darkgray h-[0rem] duration-[.5s] w-full overflow-hidden absolute;
+    }
+    .header__hoverComm.open{
+        @apply bg-darkgray h-[10rem] ease-in-out duration-[.5s] py-[.5rem] absolute;
+    }
+
+    .header__hoverCases{
+        @apply bg-darkgray h-[0rem] duration-[.5s] w-full overflow-hidden absolute;
+    }
+    .header__hoverCases.open{
+        @apply bg-darkgray h-[13rem] ease-in-out duration-[.5s] py-[.5rem] absolute;
+    } 
+
+
+    .docs__hover .docs__part{
+        @apply max-w-[30rem] p-[1rem]
+    }
+    .docs__hover .doc__lead h3{
+        @apply font-bold pb-[.5rem]
+    }
+    .docs__hover .doc__lead img{
+        @apply pb-[.5rem] w-[2rem]
+    }
+    .docs__part .docs__item ul li{
+        @apply p-[0rem]
+    }
+
+
+    .comm__hover .comm__part{
+        @apply max-w-[20rem] p-[1rem]
+    }
+    .comm__hover .comm__lead h3{
+        @apply font-bold pb-[.5rem] 
+    }
+    .comm__hover .comm__lead img{
+        @apply pb-[1rem] w-[2rem]
+    }
+    
+
+
+
+    .cases__hover .cases__part{
+        @apply max-w-[20rem] p-[1rem]
+    }
+    .cases__hover .cases__lead h3{
+        @apply font-bold pb-[.5rem]
+    }
+    .cases__hover .cases__lead img{
+        @apply pb-[.5rem] w-[2rem]
+    }
+    .cases__part .cases__item ul li{
+        @apply p-[0rem]
+    }
+
+
+    .platform__img ul button{
+        @apply bg-orange w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
+    }
+
+    .platform__img ul img{
+        @apply ml-[1.8rem];
+    }
+
+    .platform__img1 ul button{
+        @apply bg-pink-500 w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
+    }
+
+    .platform__img1 ul img{
+        @apply ml-[1.8rem];
+    }
+    .platform__img2 ul button{
+        @apply bg-lpurple w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
+    }
+
+    .platform__img2 ul img{
+        @apply ml-[1.8rem];
+    }
+    .platform__img3 ul button{
+        @apply bg-oblue w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
+    }
+
+    .platform__img3 ul img{
+        @apply ml-[1.8rem];
+    }
+    .platform__img4 ul button{
+        @apply bg-pinkish w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
+    }
+
+    .platform__img4 ul img{
+        @apply ml-[1.8rem];
+    }
+    .platform__img5 ul button{
+        @apply bg-neonred w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
+    }
+
+    .platform__img5 ul img{
+        @apply ml-[1.8rem];
+    }
+    .platform__img6 ul button{
+        @apply bg-itsgreen w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
+    }
+
+    .platform__img6 ul img{
+        @apply ml-[1.8rem];
+    }
+
+    .platform__img6 ul{
+        @apply justify-center
+    }
+
+
+
+
+
+
+    .itemD .itemD__top h4{
+        @apply pb-[1rem]
+    }
+    .othersD .othersD__top h4{
+        @apply pb-[1rem]
+    }
+
+    .itemD ul li{
+        @apply pb-[1rem] hover:text-green font-semibold  cursor-pointer
+    }
+    .itemD ul{
+        @apply hidden ease-in-out duration-[.5s] lg:block lg:w-full lg:h-auto
+    }
+    .itemD ul.open{
+        @apply block ease-in-out duration-[.5s]
+    }
+    .itemD__top i.open{
+        @apply rotate-[-180deg] ease-in duration-[.5s];
+    }
+    .itemD__top i{
+        @apply  ease-out duration-[.5s] lg:hidden
+    }
+
+} 
