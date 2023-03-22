@@ -132,135 +132,29 @@
     }
 
 
-    .header__hoverDocs{
-        @apply bg-darkgray h-[0rem] duration-[.5s] w-full overflow-hidden absolute;
-    }
+   
     .header__hoverDocs.open{
         @apply bg-darkgray h-[18rem] ease-in-out duration-[.5s] py-[.5rem] absolute;
     }
-
-    .header__hoverComm{
-        @apply bg-darkgray h-[0rem] duration-[.5s] w-full overflow-hidden absolute;
+    .header__hoverDocs.show{
+        @apply bg-darkgray h-[18rem] ease-in-out duration-[.5s] py-[.5rem] absolute;
     }
     .header__hoverComm.open{
         @apply bg-darkgray h-[10rem] ease-in-out duration-[.5s] py-[.5rem] absolute;
     }
-
-    .header__hoverCases{
-        @apply bg-darkgray h-[0rem] duration-[.5s] w-full overflow-hidden absolute;
+    .header__hoverComm.show{
+        @apply bg-darkgray h-[10rem] ease-in-out duration-[.5s] py-[.5rem] absolute;
     }
     .header__hoverCases.open{
         @apply bg-darkgray h-[13rem] ease-in-out duration-[.5s] py-[.5rem] absolute;
     } 
-
-
-    .docs__hover .docs__part{
-        @apply max-w-[30rem] p-[1rem]
-    }
-    .docs__hover .doc__lead h3{
-        @apply font-bold pb-[.5rem]
-    }
-    .docs__hover .doc__lead img{
-        @apply pb-[.5rem] w-[2rem]
-    }
-    .docs__part .docs__item ul li{
-        @apply p-[0rem]
-    }
-
-
-    .comm__hover .comm__part{
-        @apply max-w-[20rem] p-[1rem]
-    }
-    .comm__hover .comm__lead h3{
-        @apply font-bold pb-[.5rem] 
-    }
-    .comm__hover .comm__lead img{
-        @apply pb-[1rem] w-[2rem]
-    }
-    
-
-
-
-    .cases__hover .cases__part{
-        @apply max-w-[20rem] p-[1rem]
-    }
-    .cases__hover .cases__lead h3{
-        @apply font-bold pb-[.5rem]
-    }
-    .cases__hover .cases__lead img{
-        @apply pb-[.5rem] w-[2rem]
-    }
-    .cases__part .cases__item ul li{
-        @apply p-[0rem]
-    }
-
-
-    .platform__img ul button{
-        @apply bg-orange w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
-    }
-
-    .platform__img ul img{
-        @apply ml-[1.8rem];
-    }
-
-    .platform__img1 ul button{
-        @apply bg-pink-500 w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
-    }
-
-    .platform__img1 ul img{
-        @apply ml-[1.8rem];
-    }
-    .platform__img2 ul button{
-        @apply bg-lpurple w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
-    }
-
-    .platform__img2 ul img{
-        @apply ml-[1.8rem];
-    }
-    .platform__img3 ul button{
-        @apply bg-oblue w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
-    }
-
-    .platform__img3 ul img{
-        @apply ml-[1.8rem];
-    }
-    .platform__img4 ul button{
-        @apply bg-pinkish w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
-    }
-
-    .platform__img4 ul img{
-        @apply ml-[1.8rem];
-    }
-    .platform__img5 ul button{
-        @apply bg-neonred w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
-    }
-
-    .platform__img5 ul img{
-        @apply ml-[1.8rem];
-    }
-    .platform__img6 ul button{
-        @apply bg-itsgreen w-[120px] h-[120px] content-center rounded-[100px] border border-none cursor-pointer;
-    }
-
-    .platform__img6 ul img{
-        @apply ml-[1.8rem];
-    }
-
-    .platform__img6 ul{
-        @apply justify-center
-    }
+    .header__hoverCases.show{
+        @apply bg-darkgray h-[13rem] ease-in-out duration-[.5s] py-[.5rem] absolute;
+    } 
 
 
 
 
-
-
-    .itemD .itemD__top h4{
-        @apply pb-[1rem]
-    }
-    .othersD .othersD__top h4{
-        @apply pb-[1rem]
-    }
 
     .itemD ul li{
         @apply pb-[1rem] hover:text-green font-semibold  cursor-pointer
