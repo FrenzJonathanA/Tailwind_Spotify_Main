@@ -23,6 +23,7 @@ module.exports = {
         neonred: '#ff4632',
         itsgreen: '#00a575',
         suplight: 'rgba(0,0,0,0)',
+        vlgray: '#f8f8f8'
       },
       dropShadow: {
         'custom': '0 0 5px rgba(0, 0, 0, 0.3)',
